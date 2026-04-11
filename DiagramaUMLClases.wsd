@@ -1,0 +1,41 @@
+@startuml sistema-gestion-torneo-videojuegos
+skinparam linetype ortho
+
+class Administracion {
+    +main(String[]): void
+}
+
+class Jugador {
+    -int dni
+    -String nombre
+    -String nacionalidad
+    -int partidaJugada
+    -int puntaje
+    +getDni(): int
+    +getNombre(): String
+    +getNacionalidad(): String
+    +getPartidaJugada(): int
+    +getPuntaje(): int
+}
+class Simulacion {
+}
+
+class Torneo { 
+}
+
+Administracion ..> Torneo : crea
+Administracion ..> Jugador : crea
+Administracion ..> Simulacion : crea
+
+Torneo "1" <-- "0..*  " Simulacion : involucra
+Simulacion "0..*  " -- "0..*  " Jugador : contiene/participa
+
+/'
+Administracion es el punto de entrada (main)
+Torneo contiene Simulaciones
+Simulaciones unen Jugadores (relación muchos-a-muchos)
+Un jugador puede estar en varias simulaciones
+'/
+
+
+@enduml
