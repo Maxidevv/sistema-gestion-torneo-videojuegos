@@ -1,6 +1,5 @@
 package src.models;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Torneo {
     private String nombre;
