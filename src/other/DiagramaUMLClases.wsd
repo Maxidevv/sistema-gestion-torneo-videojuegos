@@ -8,8 +8,8 @@ class Administracion {
 class Jugador {
     -int dni
     -String nombre
-    -String nacionalidad
-    -int partidaJugada
+    -String nacionalidad 
+    -int partidaJugada 
     -int puntaje
     +getDni(): int
     +getNombre(): String

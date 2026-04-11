@@ -7,8 +7,8 @@ Proyecto académico que implementa un sistema de gestión para torneos de videoj
 
 ```
 src/
-├── Administracion.java        (Clase principal - main)
 └── models/
+    ├── Administracion.java        (Clase principal - main)
     ├── Jugador.java
     ├── Torneo.java
     └── Simulacion.java
@@ -21,7 +21,7 @@ src/
 - `Simulacion.java` - Representa cada partida/simulación del torneo
 
 ## Diagrama de Clases
-Ver archivo: `DiagramaUMLClases.wsd`
+Ver archivo: `DiagramaUMLClases.wsd` (aca tenemos que poner la imagen del diagrama UML)
 
 **Relaciones:**
 - Administracion **crea** → Torneo, Jugador, Simulacion
