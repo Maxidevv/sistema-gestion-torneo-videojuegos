@@ -1,1 +1,0 @@
-# sistema-gestion-torneo-videojuegos
