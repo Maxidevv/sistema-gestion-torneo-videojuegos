@@ -8,18 +8,19 @@ Proyecto académico que implementa un sistema de gestión para torneos de videoj
 ```
 src/
 ├── Administracion.java        (Clase principal - main)
-├── Jugador.java
-├── Torneo.java
-└── Simulacion.java
+└── models/
+    ├── Jugador.java
+    ├── Torneo.java
+    └── Simulacion.java
 ```
 
 **Clases:**
-- `Administracion.java` - Punto de entrada del programa (controlador principal)
+- `Administracion.java` - Punto de entrada del programa (Clase principal)
 - `Jugador.java` - Representa a un participante del torneo
 - `Torneo.java` - Contenedor principal que organiza el evento
 - `Simulacion.java` - Representa cada partida/simulación del torneo
 
-## 📊 Diagrama de Clases
+## Diagrama de Clases
 Ver archivo: `DiagramaUMLClases.wsd`
 
 **Relaciones:**
@@ -31,7 +32,7 @@ Ver archivo: `DiagramaUMLClases.wsd`
 
 **Compilar:**
 ```bash
-javac -d build/ src/*.java
+javac -d build/ src/Administracion.java src/models/*.java
 ```
 
 **Ejecutar:**
