@@ -1,10 +1,53 @@
-Este archivo README.md tendra parte de la documentacion del proyeto...
+# Sistema de Gestión de Torneo de Videojuegos
 
-ESTRUCTURA DEL PROYECTO
+## 📋 Descripción
+Proyecto académico que implementa un sistema de gestión para torneos de videojuegos. Permite administrar jugadores, torneos y simulaciones/partidas.
+
+## 🏗️ Estructura del Proyecto
+
+```
 src/
-├── Administracion.java                    (clase principal que ejecuta el programa) -> Nuestro main
-├── models/
-│   ├── Jugador.java
-│   ├── Torneo.java            (clases que representan datos)
-│   └── Simulacion.java 
+├── Administracion.java        (Clase principal - main)
+├── Jugador.java
+├── Torneo.java
+└── Simulacion.java
+```
+
+**Clases:**
+- `Administracion.java` - Punto de entrada del programa (controlador principal)
+- `Jugador.java` - Representa a un participante del torneo
+- `Torneo.java` - Contenedor principal que organiza el evento
+- `Simulacion.java` - Representa cada partida/simulación del torneo
+
+## 📊 Diagrama de Clases
+Ver archivo: `DiagramaUMLClases.wsd`
+
+**Relaciones:**
+- Administracion **crea** → Torneo, Jugador, Simulacion
+- Torneo **1** ← **0..*** Simulacion (involucra)
+- Simulacion **0..*** ↔ **0..*** Jugador (contiene/participa)
+
+## 🚀 Cómo Compilar y Ejecutar
+
+**Compilar:**
+```bash
+javac -d build/ src/*.java
+```
+
+**Ejecutar:**
+```bash
+java -cp build/ Administracion
+```
+
+## 📦 Requisitos
+- Java 11 o superior
+
+## 👥 Integrantes del Equipo
+- Maxi Moncada(maxilucianomoncada@gmail.com)
+- Matias Moyano (email)
+- Maximo Zalazar (mail)
+
+## 📝 Notas
+- Todas las clases se encuentran en una carpeta `src/` con una subcarpeta `models/`
+- El programa compilado se genera en la carpeta `build/` 
 
