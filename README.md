@@ -1,9 +1,9 @@
 # Sistema de Gestión de Torneo de Videojuegos
 
-## 📋 Descripción
+## Descripción
 Proyecto académico que implementa un sistema de gestión para torneos de videojuegos. Permite administrar jugadores, torneos y simulaciones/partidas.
 
-## 🏗️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -27,7 +27,7 @@ Ver archivo: `DiagramaUMLClases.wsd`
 - Torneo **1** ← **0..*** Simulacion (involucra)
 - Simulacion **0..*** ↔ **0..*** Jugador (contiene/participa)
 
-## 🚀 Cómo Compilar y Ejecutar
+## Cómo Compilar y Ejecutar
 
 **Compilar:**
 ```bash
@@ -39,15 +39,15 @@ javac -d build/ src/*.java
 java -cp build/ Administracion
 ```
 
-## 📦 Requisitos
+## Requisitos
 - Java 11 o superior
 
-## 👥 Integrantes del Equipo
-- Maxi Moncada(maxilucianomoncada@gmail.com)
+## Integrantes del Equipo
+- Maxi Moncada (maxilucianomoncada@gmail.com)
 - Matias Moyano (email)
 - Maximo Zalazar (mail)
 
-## 📝 Notas
+## Notas
 - Todas las clases se encuentran en una carpeta `src/` con una subcarpeta `models/`
 - El programa compilado se genera en la carpeta `build/` 
 
