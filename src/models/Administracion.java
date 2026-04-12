@@ -1,7 +1,25 @@
 package src.models;
 import java.util.Scanner;
 
+/**
+ * Clase principal del sistema de gestión de torneo de videojuegos.
+ * Contiene el menú interactivo y controla el flujo de la aplicación.
+ * Permite agregar jugadores, listar, buscar, simular partidas y ver ranking.
+ * 
+ * @author Matias, Maxi, Maximo
+ * @version 1.2
+ * @see Torneo
+ * @see Jugador
+ * @see Partida
+ */
 public class Administracion {
+    /**
+     * Método principal que inicia la aplicación del sistema de torneo.
+     * Crea un menú interactivo que permite al usuario gestionar jugadores,
+     * simular partidas y consultar información del torneo.
+     *
+     * @param args Argumentos de línea de comandos (no se utilizan)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Torneo torneo = new Torneo("Torneo regional");
