@@ -1,0 +1,80 @@
+@startuml sistema-gestion-torneo-videojuegos
+skinparam linetype ortho
+
+' ===== CLASE ADMINISTRACION =====
+class Administracion {
+    {static} main(args: String[]): void
+}
+
+' ===== CLASE TORNEO =====
+class Torneo {
+    -String nombre
+    -ArrayList<Jugador> jugadores
+    -ArrayList<Partida> partidas
+    ---
+    +Torneo(nombre: String)
+    +getNombre(): String
+    +setNombre(nombre: String): void
+    +getJugadores(): ArrayList<Jugador>
+    +getPartidas(): ArrayList<Partida>
+    +agregarJugador(jugador: Jugador): void
+    +listarJugadores(): void
+    +buscarJugador(nombre: String): Jugador
+    +simularPartida(i1: int, i2: int, i3: int, i4: int): void
+    +mostrarRanking(): void
+    +mostrarHistorialPartidas(): void
+}
+
+' ===== CLASE JUGADOR =====
+class Jugador {
+    -int dni
+    -String nombre
+    -String nacionalidad
+    -int partidasJugadas
+    -int puntaje
+    -ArrayList<Partida> partidas
+    ---
+    +Jugador(dni: int, nombre: String, nacionalidad: String)
+    +getDni(): int
+    +getNombre(): String
+    +getNacionalidad(): String
+    +getPartidasJugadas(): int
+    +getPuntaje(): int
+    +getPartidas(): ArrayList<Partida>
+    +setNombre(nombre: String): void
+    +setNacionalidad(nacionalidad: String): void
+    +incrementarPartida(): void
+    +incrementarPuntaje(puntos: int): void
+    +agregarPartida(partida: Partida): void
+    +getEstadisticas(): String
+}
+
+' ===== CLASE PARTIDA =====
+class Partida {
+    -Jugador e1j1
+    -Jugador e1j2
+    -Jugador e2j1
+    -Jugador e2j2
+    -int equipoGanador
+    -boolean esEmpate
+    ---
+    +Partida(e1j1: Jugador, e1j2: Jugador, e2j1: Jugador, e2j2: Jugador)
+    +getE1j1(): Jugador
+    +getE1j2(): Jugador
+    +getE2j1(): Jugador
+    +getE2j2(): Jugador
+    +getEquipoGanador(): int
+    +isEsEmpate(): boolean
+    +simularResultado(): void
+    +toString(): String
+}
+
+' ===== RELACIONES =====
+Administracion ..> Torneo : crea
+Administracion ..> Jugador : crea
+Administracion ..> Partida : crea
+Torneo "1 " --> "* " Jugador : contiene
+Torneo "1 " --> "* " Partida : registra
+Partida "*  " --> "* " Jugador : enfrenta\n(2vs2)
+
+@enduml

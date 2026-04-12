@@ -1,0 +1,71 @@
+@startuml DiagramaUMLObjetos
+skinparam linetype ortho
+
+' ===== INSTANCIA DE ADMINISTRACION =====
+object administracion {
+    main()
+}
+
+' ===== INSTANCIA DE TORNEO =====
+object "torneo1 : Torneo" as torneo1 {
+    nombre = "Torneo Regional"
+    jugadores = [jugador1, jugador2, jugador3, ...]
+    partidas = [partida1, partida2]
+}
+
+' ===== INSTANCIAS DE JUGADORES =====
+object "jugador1 : Jugador" as j1 {
+    dni = 12345678
+    nombre = "Carlos"
+    nacionalidad = "Colombia"
+    partidasJugadas = 2
+    puntaje = 7
+}
+
+object "jugador2 : Jugador" as j2 {
+    dni = 87654321
+    nombre = "María"
+    nacionalidad = "Argentina"
+    partidasJugadas = 1
+    puntaje = 3
+}
+
+object "jugador3 : Jugador" as j3 {
+    dni = 11223344
+    nombre = "Juan"
+    nacionalidad = "Mexico"
+    partidasJugadas = 2
+    puntaje = 6
+}
+
+object "jugador4 : Jugador" as j4 {
+    dni = 44332211
+    nombre = "Ana"
+    nacionalidad = "Peru"
+    partidasJugadas = 1
+    puntaje = 1
+}
+
+' ===== INSTANCIA DE PARTIDA =====
+object "partida1 : Partida" as p1 {
+    e1j1 = jugador1
+    e1j2 = jugador2
+    e2j1 = jugador3
+    e2j2 = jugador4
+    equipoGanador = 1
+    esEmpate = false
+}
+
+' ===== RELACIONES ENTRE OBJETOS =====
+administracion --> torneo1
+torneo1 --> j1
+torneo1 --> j2
+torneo1 --> j3
+torneo1 --> j4
+torneo1 --> p1
+p1 --> j1 
+p1 --> j2
+p1 --> j3 
+p1 --> j4 
+
+@enduml
