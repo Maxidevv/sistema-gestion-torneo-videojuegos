@@ -50,6 +50,6 @@ java -cp bin/ src.models.Administracion
 ## Integrantes del Equipo
 - Maxi Moncada (maxilucianomoncada@gmail.com)
 - Matias Moyano (matiasmoyanobustos@gmail.com)
-- Maximo Zalazar (mail)
+- Maximo Zalazar (mzalazar474@alumnos.iua.edu.ar)
  
 
