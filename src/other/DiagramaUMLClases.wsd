@@ -70,11 +70,11 @@ class Partida {
 }
 
 ' ===== RELACIONES =====
-Administracion -- Torneo : crea
-Administracion -- Jugador : crea
-Administracion -- Partida : crea
-Torneo "1 " -- "* " Jugador : contiene
-Torneo "1 " -- "* " Partida : registra
-Partida "*  " -- "* " Jugador : enfrenta\n(2vs2)
+Administracion ..> Torneo : crea
+Administracion ..> Jugador : crea
+Administracion ..> Partida : crea
+Torneo "1 " --> "* " Jugador : contiene
+Torneo "1 " --> "* " Partida : registra
+Partida "*  " --> "* " Jugador : enfrenta\n(2vs2)
 
 @enduml
